@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nav menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000;
+            overflow: hidden;
+        }
+        ul{
+            list-style: none;
+            padding: 0px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 1px 1px 8px 1px #ccc;
+            position: relative;
+        }
+        li:not(:last-child){
+            border-bottom: 1px solid #ddd;
+        }
+        li{
+            font-family: "Font Awesome 6 Free";
+            padding: 10px 28px;
+            transition: transform 0.2s ease, z-index 0s;
+            position: relative;     /* required for z-index */
+            overflow: visible;
+            background: white;
+            z-index: 1;
+        }
+        li:is(:first-child){
+            border-radius: 5px 5px 0 0;
+        }
+        li:is(:last-child){
+            border-radius: 0 0 5px 5px;
+        }
+        li:hover{
+            transform: scale(1.2);
+            box-shadow: 1px 1px 3px 3px #ccc;
+            z-index: 10;
+            cursor: pointer;
+        }
+        li.insta::before{
+            content: "\f16d";
+            font-family: "Font Awesome 6 Brands";
+            margin-right: 10px;
+        }
+        li.twitter::before{
+            content: "\f099";
+            font-family: "Font Awesome 6 Brands";
+            margin-right: 10px;
+        }
+        li.youtube::before{
+            content: "\f167";
+            font-family: "Font Awesome 6 Brands";
+            margin-right: 10px;
+        }
+        li.facebook::before{
+            content: "\f09a";
+            font-family: "Font Awesome 6 Brands";
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="insta">insta</li>
+            <li class="twitter">twitter</li>
+            <li class="youtube">youtube</li>
+            <li class="facebook">facebook</li>
+        </ul>
+    </nav>
+</body>
+</html>
