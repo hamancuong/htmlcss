@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nav menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000;
+            overflow: hidden;
+        }
+        .logo{
+            width: 50px;
+            height: 50px;
+            border-top:red;
+            border-left: yellow;
+            border-bottom: green;
+            border-right: blue;
+            border-radius: 50%;
+            position: relative;
+        }
+        .logo::before{
+            content: "";
+            position: absolute;
+            width: 20px;
+            border-top: 10px solid blue;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+        }
+        .logo::after{
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 30px solid transparent;
+            border-top: 30px solid transparent;
+            border-bottom: 30px solid #000;
+            right: -10px;
+            transform: translateY(-65%);
+        }
+    </style>
+</head>
+<body>
+    <div class="logo"></div>
+</body>
+</html>
